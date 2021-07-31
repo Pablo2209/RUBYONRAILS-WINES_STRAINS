@@ -16,6 +16,21 @@
     <%= form.text_field :name %>
   </div>
 
+  <!-- #Muestra en el formulario de people los guesses disponibles -->
+  <div class="field">
+    <%= form.label :strains %>
+    <%= form.collection_check_boxes(:strain_ids, @strains, :id, :name) do |g| %> 
+      <%= g.label class: 'label-checkbox' do %>
+        <%= g.check_box + g.text %>
+      <% end %>
+    <% end %>
+  </div>
+  <!-- #crear una nueva guess - Formulario utilizado por cocoon-->
+  <div class="links">
+    <%= link_to_add_association 'New STRAIN', form, :strains%>
+  </div>
+
+
   <div class="actions">
     <%= form.submit %>
   </div>

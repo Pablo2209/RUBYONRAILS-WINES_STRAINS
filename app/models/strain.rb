@@ -6,5 +6,5 @@ class Strain < ApplicationRecord
     has_many :wines, through: :wines_strains
 
     /Para disponer del formulario de ingredient y la tabla intermedia/
-    accepts_nested_attributes_for :wines, :dishes_ingredients, reject_if: :all_blanck, allow_destroy: true
+    accepts_nested_attributes_for :wines, :wines_strains, reject_if: :all_blanck, allow_destroy: true
 end
