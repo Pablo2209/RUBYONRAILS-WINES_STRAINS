@@ -1,0 +1,13 @@
+
+<div class="nested-fields">
+    <div class="field">
+        <%= f.label :strain_id %>
+        <%= f.collection_select :strain_id, @strains, :id, :name %>
+    </div>
+    
+     <div class="field">
+        <%= f.label :quantity %>
+        <%= f.number_field :quantity %>
+    </div>
+    
+</div>
