@@ -6,7 +6,8 @@ ruby '2.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6'
 # Use sqlite3 as the database for Active Record
-
+gem 'sqlite3', '~> 1.4', group: :development
+gem 'pg', group: :productions
 gem 'cocoon'
 gem 'jquery-rails'
 # Use Puma as the app server
@@ -50,8 +51,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  
-  gem 'pg'
+
 end
 
 group :test do
@@ -60,7 +60,6 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
-  gem 'sqlite3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
